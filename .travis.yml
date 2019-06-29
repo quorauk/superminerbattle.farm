@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- "12"
+cache: yarn
+script:
+- yarn
+- yarn build
+- yarn package
+deploy:
+  provider: releases
+  api_key:
+    secure: Cync3uXbHLFkD+3RAzkt7VLfj7sjV8rmAsrXy5rQPBnbqH64LVZEJriEw0B/yT2nlcELpRKK1GBsXHg4bSsSiKKxna9/NV5NNbA49aM+p5aoSEA6pB7JUixvzIPmgHnRTPdEdG/goReLfc0isJtoW4ePZiqXMbI4NLJy7+DW0ZfS8KSRR6a21eqLGWOeziQn5mAsJtbwFIrPSN7wychTCr9g+ehxmq24/dyp8bYx0gdMky18p5sERWqLgRBTrU4YI0oMkpi0vrx5ep3t6d1X5pJPokGrBhdA8DFMUBmYeAA1x5uHA0bJqco8MEMSIj5DxWlBogqcXWs3BKEPebwLqVCGVuTePXu2RZqxmx5HmWszDSLeDHLxc1VKIcuxZ7XU61g7VRnBqmHmF4fAtJJelEQcdrfWWrMNvMrQvN/WbkNjOj3OVFPZ6oXf4k0VxgM30htW1tppQjU0CDB9s1OrZlqf59vsScVccvMkjS6bWtohS4JHeCMnLYyMJBGUw2juPFiV4W0iKbAW2Dln1urxwm5RXSPYV6lVQkcrKvGipsB8mnOtUnsZ3UCpFfc7i/FpC1pgeMfEYrdXnAT/4503JEUUZ6KqMxgsblA4enO3BsDKfrhAv5AytQmKmMnAHI6OCVjctv15epf54OsyzHyjqENfWLN3H6FiR+lVJlNK3+4=
+  file: superminerbattle.farm.tgz
+  skip_cleanup: true
+  on:
+    repo: quorauk/superminerbattle.farm
+    branch: master
+    tags: true
