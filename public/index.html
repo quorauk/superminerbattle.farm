@@ -19,6 +19,17 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '133444324758273',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v6.0'
+        });
+      };
+    </script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
     <title>SMBF</title>
   </head>
   <body>
